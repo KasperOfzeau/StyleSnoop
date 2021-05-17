@@ -1,16 +1,89 @@
-.colors li {
-    list-style-type: none;
-    position: relative;   
+@charset "UTF-8";
+h2 {
+  font-size: 24px;
 }
 
-.colors li::before {
-    content: '■';
-    position: absolute;
-    left: -1em;         
-    font-size: 1.1em;   
-    color: transparent; 
-    background: var(--color);
-    border: 1px solid black;
-    height: 10px;
-    width: 10px;
+body {
+  padding: 17px;
+  background-color: #181818;
+  color: #fff;
 }
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 17px;
+  background-color: #202020;
+}
+
+.grid-container {
+  padding-top: 65px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -webkit-column-gap: 25px;
+          column-gap: 25px;
+      grid-template-areas: "fontsContainer colorsContainer";
+}
+
+.grid-container .fontsContainer, .grid-container .colorsContainer {
+  width: 350px;
+}
+
+.grid-container .fontsContainer .fonts, .grid-container .colorsContainer .fonts {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: fontsContainer;
+}
+
+.grid-container .fontsContainer .colors, .grid-container .colorsContainer .colors {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: colorsContainer;
+  margin-left: -5px;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+.grid-container .fontsContainer .colors li, .grid-container .colorsContainer .colors li {
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+  list-style-type: none;
+  position: relative;
+  margin: 0px 15px 7px 15px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  background-color: #4f5d75;
+  color: #fafafa;
+}
+
+.grid-container .fontsContainer .colors li::before, .grid-container .colorsContainer .colors li::before {
+  content: '■';
+  position: absolute;
+  left: -2em;
+  font-size: 1.1em;
+  color: transparent;
+  background: var(--color);
+  border: 1px solid black;
+  height: 15px;
+  width: 15px;
+}
+
+.grid-container .fontsContainer .colors li:hover, .grid-container .colorsContainer .colors li:hover {
+  cursor: pointer;
+}
+
+.grid-container .fontsContainer .copyText, .grid-container .colorsContainer .copyText {
+  color: aquamarine;
+}
+
+ul {
+  padding-left: 15px;
+}
+/*# sourceMappingURL=style.css.map */
