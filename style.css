@@ -1,0 +1,16 @@
+.colors li {
+    list-style-type: none;
+    position: relative;   
+}
+
+.colors li::before {
+    content: '■';
+    position: absolute;
+    left: -1em;         
+    font-size: 1.1em;   
+    color: transparent; 
+    background: var(--color);
+    border: 1px solid black;
+    height: 10px;
+    width: 10px;
+}
