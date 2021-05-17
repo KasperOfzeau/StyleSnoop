@@ -1,2 +1,2 @@
-# Stylesnoop
+# StyleSnoop
  My first Chrome extention
