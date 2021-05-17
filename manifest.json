@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
 
-    "name": "Stylesnoop",
+    "name": "StyleSnoop",
     "description": "My first Chrome extention",
     "version": "1.0",
     "author": "Kasper Beljaars",
