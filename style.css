@@ -39,6 +39,18 @@ header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: fontsContainer;
+  font-size: 16px;
+  padding: 0;
+}
+
+.grid-container .fontsContainer .fonts li, .grid-container .colorsContainer .fonts li {
+  list-style-type: none;
+  position: relative;
+  margin: 7px 0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  background-color: #4f5d75;
+  color: #fafafa;
 }
 
 .grid-container .fontsContainer .colors, .grid-container .colorsContainer .colors {
